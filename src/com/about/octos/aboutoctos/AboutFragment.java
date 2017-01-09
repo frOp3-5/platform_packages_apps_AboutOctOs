@@ -37,6 +37,22 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_about_octos, container, false);
 
+        // hide the device maintainer information if none is provided
+        String mDevDevice = getString(R.string.dev_device);
+        if (mDevDevice.equals("novalue")) {
+            View MaintainerLabel = root.findViewById(R.id.MaintainerLabel);
+            MaintainerLabel.setVisibility(View.GONE);
+            View MaintainerCard = root.findViewById(R.id.MaintainerCard);
+            MaintainerCard.setVisibility(View.GONE);
+        }
+
+        // hide the XDA support thread link if none is provided
+        String mSupportURL = getString(R.string.url_support_thread);
+        if (mSupportURL.equals("novalue")) {
+            View supportLabel = root.findViewById(R.id.device_support);
+            supportLabel.setVisibility(View.GONE);
+        }
+
         return root;
     }
 

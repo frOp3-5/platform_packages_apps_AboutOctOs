@@ -35,6 +35,7 @@
 
         <com.about.octos.settings.UrlSetting
                 android:id="@+id/octos"
+                android:button="@drawable/website"
                 android:title="@string/octos_website_title"
                 android:summary="@string/octos_website_summary"
                 octos:url="@string/url_octos"
@@ -44,7 +45,18 @@
                 />
 
         <com.about.octos.settings.UrlSetting
+            android:id="@+id/octos_github"
+            android:button="@drawable/github_octocat"
+            android:title="@string/octos_github_title"
+            android:summary="@string/octos_github_summary"
+            octos:url="@string/url_octos_github"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <com.about.octos.settings.UrlSetting
                 android:id="@+id/octos_review"
+                android:button="@drawable/gerrit"
                 android:title="@string/octos_review_title"
                 android:summary="@string/octos_review_summary"
                 octos:url="@string/url_octos_gerrit"
@@ -56,10 +68,10 @@
         <TextView
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/device_support_title"
-                android:id="@+id/textView"
+                android:id="@+id/MaintainerLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"
                 android:layout_marginStart="15dip"
@@ -70,6 +82,7 @@
                 />
 
         <com.about.octos.widgets.DeveloperPreference
+                android:id="@+id/MaintainerCard"
                 octos:nameDev="@string/dev_device"
                 octos:twitterHandle="@string/twitter_device"
                 octos:githubLink="@string/github_device"
@@ -78,6 +91,17 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+        <com.about.octos.settings.UrlSetting
+            android:id="@+id/device_support"
+            android:button="@drawable/xda"
+            android:title="@string/support_title"
+            android:summary="@string/support_summary"
+            octos:url="@string/url_support_thread"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
     </LinearLayout>
 </ScrollView>

@@ -4,9 +4,11 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.about.octos.aboutoctos.R;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
  * <p/>
  * <ul><b>Supported attributes (all are optional)</b>
  * <li>android:key - the key to look up the value
+ * <li>android:button - a @drawable reference to display as the button
  * <li>android:title - a @string reference to display as the title
  * <li>android:summary - a @string reference to display as the summary
  * <li>android:defaultValue - a string (NOT a reference) which is stored as the default value.
@@ -43,11 +46,14 @@ public class BaseSetting extends LinearLayout {
 
     // values obtained from attributes
     private String aKey, aTable, aTitle, aSummary, aDefaultValue;
+    private Drawable aButton;
 
     // separate in case we want to query whether one was supplied
     private String mSummary;
 
     protected TextView mTitleTextView, mDescriptionTextView;
+
+    protected ImageView mButtonImageView;
 
     private OnSettingChangedListener mOnSettingChangedListener;
 
@@ -95,7 +101,7 @@ public class BaseSetting extends LinearLayout {
             Resources r = context.getResources();
             aTitle = readAttrStringResource(r, attrs.getAttributeResourceValue(NAMESPACE_ANDROID, "title", 0));
             aSummary = readAttrStringResource(r, attrs.getAttributeResourceValue(NAMESPACE_ANDROID, "summary", 0));
-
+            aButton = r.getDrawable(attrs.getAttributeResourceValue(NAMESPACE_ANDROID, "button", 0),null);
             aTable = attrs.getAttributeValue(null, "table");
             if (aTable == null) {
                 aTable = "aokp";
@@ -105,8 +111,10 @@ public class BaseSetting extends LinearLayout {
         mRootView = (ViewGroup) View.inflate(context, R.layout.setting_base, null);
         mTitleTextView = (TextView) mRootView.findViewById(R.id.title);
         mDescriptionTextView = (TextView) mRootView.findViewById(R.id.summary);
+        mButtonImageView = (ImageView) mRootView.findViewById(R.id.button);
 
         setTitle(aTitle);
+        setButton(aButton);
         setSummary(aSummary);
         super.setOnClickListener(mOnClickListener);
     }
@@ -280,6 +288,13 @@ public class BaseSetting extends LinearLayout {
         aTitle = title;
         if (mTitleTextView != null) {
             mTitleTextView.setText(title);
+        }
+    }
+
+    protected void setButton(Drawable button) {
+        aButton = button;
+        if (mButtonImageView != null) {
+            mButtonImageView.setImageDrawable(button);
         }
     }
 
