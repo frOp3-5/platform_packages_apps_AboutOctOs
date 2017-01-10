@@ -72,6 +72,12 @@
     <string name="gplus_canondroid15" translatable="false">https://plus.google.com/u/0/102791315682894112550/posts</string>
     <string name="email_canondroid15" translatable="false">@string/email_octos</string>
 
+    <string name="dev_manfromgta" translatable="false">manfromgta</string>
+    <string name="twitter_manfromgta" translatable="false">@null</string>
+    <string name="github_manfromgta" translatable="false">https://github.com/manfromgta</string>
+    <string name="gplus_manfromgta" translatable="false">https://plus.google.com/u/0/117373342816667916076</string>
+    <string name="email_manfromgta" translatable="false">manfromgta@gmail.com</string>
+
     <string name="dev_jlask" translatable="false">jlask</string>
     <string name="twitter_jlask" translatable="false">jason972000</string>
     <string name="github_jlask" translatable="false">https://github.com/jlask</string>

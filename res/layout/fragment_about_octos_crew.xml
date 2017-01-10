@@ -67,6 +67,16 @@
                 android:layout_height="wrap_content"/>
 
         <com.about.octos.widgets.DeveloperPreference
+                android:title="@string/dev_manfromgta"
+                octos:nameDev="@string/dev_manfromgta"
+                octos:gplusLink="@string/gplus_manfromgta"
+                octos:githubLink="@string/github_manfromgta"
+                octos:emailDev="@string/email_manfromgta"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.about.octos.widgets.DeveloperPreference
                 android:title="@string/dev_jlask"
                 octos:nameDev="@string/dev_jlask"
                 octos:twitterHandle="@string/twitter_jlask"
