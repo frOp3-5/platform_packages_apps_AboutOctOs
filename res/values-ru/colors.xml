@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- <color name="background_tab_pressed">#66757575</color> -->
+    <color name="tab_color">@color/material_pixel_blue_bright</color>
+
+    <color name="material_pixel_blue_bright">@*android:color/material_pixel_blue_bright</color>
+    <!-- <color name="mmaterial_pixel_blue_bright">#ff4285f4</color> -->
+    <!-- <color name="tab_color">@color/material_pixel_blue_bright</color> -->
+    <!-- <color name="material_blue_grey_900">#ff263238</color> -->
+    <color name="material_blue_grey_900">@*android:color/material_blue_grey_900</color>
+
+
+    <!-- new -->
+    <color name="white">#FFF</color>
+    <color name="background_tab_pressed">#1AFFFFFF</color>
+    <color name="icon_tint_color">@color/material_pixel_blue_bright</color>
+
+    <!-- Expanded desktop -->
+    <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
+    <drawable name="expanded_item_bg">@android:color/background_light</drawable>
+    <color name="expanded_button_color_normal">#4CAF50</color>
+    <color name="expanded_button_color_close">#F44336</color>
+
+</resources>
